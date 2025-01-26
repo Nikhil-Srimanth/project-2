@@ -34,7 +34,7 @@ jobs:
         with:
             command: buildozer android debug
             buildozer_version: stable
-            docker_image: kivy/buildozer:<specific-version>
+            docker_image: kivy/buildozer:1.2.0
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
