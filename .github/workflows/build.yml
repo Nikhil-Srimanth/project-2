@@ -33,7 +33,7 @@ jobs:
         id: buildozer
         with:
           command: buildozer android debug
-          buildozer_version: kivy/buildozer:1.2.0
+          buildozer_version: kivy/buildozer:1.2.0  # Use a fixed version
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
