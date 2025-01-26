@@ -1,0 +1,48 @@
+<StartButton>:
+    size_hint: None, None
+    size: 200, 50 
+    background_color: 0.2, 0.7, 0.2, 1  
+    color: 1, 1, 1, 1  
+    font_size: 20
+    bold: True
+
+<StopButton>:
+    size_hint: None, None
+    size: 200, 50  # Set fixed size for the button
+    background_color: 0.7, 0.2, 0.2, 1 
+    color: 1, 1, 1, 1  
+    font_size: 20
+    bold: True
+
+<ObjectDetectionApp>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: 10
+        spacing: 10
+        
+        Image:
+            id: image
+            size_hint: 1, 0.8
+        
+       
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: 100
+            spacing: 20
+            # Center buttons
+            canvas.before:
+                PushMatrix
+                
+            BoxLayout:
+                Button:
+                    text: "Start Detection"
+                    size_hint: None, None
+                    size: 200, 50
+                    on_press: app.start_detection()
+                Button:
+                    text: "Stop Detection"
+                    size_hint: None, None
+                    size: 200, 50
+                    disabled: True
+                    on_press: app.stop_detection()
